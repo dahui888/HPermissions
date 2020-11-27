@@ -5,7 +5,8 @@
 ![](picture/1.png) ![](picture/2.jpg) ![](picture/3.jpg)
 ![](picture/4.jpg) ![](picture/5.jpg) ![](picture/6.jpg)
 
-####使用方式
+#### 使用方式
+
 引用
 1、在根目录的build.gradle中加入如下配置
 ```
