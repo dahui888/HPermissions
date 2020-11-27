@@ -2,19 +2,19 @@
 
 * [点击此处下载Demo](HPermissions.apk)，[博客地址](https://www.jianshu.com/u/37d88b909f3b)
 
-![](picture/1.jpg) ![](picture/2.jpg) ![](picture/3.jpg)
+![](picture/1.png) ![](picture/2.jpg) ![](picture/3.jpg)
 ![](picture/4.jpg) ![](picture/5.jpg) ![](picture/6.jpg)
 
 ####使用方式
 引用
 1、在根目录的build.gradle中加入如下配置
 ```
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
+allprojects {
+   repositories {
+	...
+	maven { url 'https://jitpack.io' }
+   }
+}
 ```
 2、在要是用的module中增加如下引用
 ```groovy
@@ -161,26 +161,6 @@ HPermissions.with(MainActivity.this)
             }
         });
 ```
-
-![](picture/7.jpg)
-
-#### 不同权限请求框架之间的对比
-
-|     功能及细节对比    | [HPermissions](https://github.com/dahui888/HPermissions)  | [AndPermission](https://github.com/yanzhenjie/AndPermission) | [RxPermissions](https://github.com/tbruyelle/RxPermissions) | [PermissionsDispatcher](https://github.com/permissions-dispatcher/PermissionsDispatcher) |  [EasyPermissions](https://github.com/googlesamples/easypermissions) | [PermissionX](https://github.com/guolindev/PermissionX) 
-| :--------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: |
-|    对应版本  |  9.0 |  2.0.3  |  0.12   |   4.8.0  |  3.0.0   |  1.4.0    |
-|    minSdk 要求  |  API 11+ |  API 14+  |  API 14+   |   API 14+   |  API 14+   |  API 15+    |
-|    class 文件数量  |  7 个  | 110 个  |  3 个  |   37 个  |   15 个  |  16 个   |
-|    aar 包大小  |  [19 KB](https://github.com/dahui888/HPermissions)  | [127 KB](https://mvnrepository.com/artifact/com.yanzhenjie/permission)  |  [28 KB](https://jitpack.io/#com.github.tbruyelle/rxpermissions)  |   [22 KB](https://bintray.com/hotchemi/org.permissionsdispatcher/permissionsdispatcher#files/org/permissionsdispatcher/permissionsdispatcher)  |  [48 KB](https://bintray.com/easygoogle/EasyPermissions/easypermissions#files/pub/devrel/easypermissions)   |   [32 KB](https://bintray.com/guolindev/maven/permissionx#files/com/permissionx/guolindev/permissionx)  |
-|   是否有依赖  |  无任何依赖  | 依赖 Support  |  依赖 AndroidX 和 RxJava |  依赖 AndroidX   |   依赖 AndroidX  |   依赖 AndroidX  |
-|   安装包权限   |  支持  |  支持  |  不支持  |  不支持   |  不支持   |  不支持   |
-|   悬浮窗权限   |  支持  |  支持  |  不支持  |  不支持   |  不支持   |  不支持   |
-|   通知栏权限   |  支持  |  出现崩溃  |  不支持  |  不支持   |   不支持  |  不支持   |
-|   系统设置权限   |  支持  |  支持  |  不支持  |  不支持   |   不支持  |  不支持   |
-|   Android 8.0 两个新危险权限   |  已适配  |  已适配  |  未适配  |   已适配  |  未适配   |   已适配  |
-|   Android 10.0 三个新危险权限   |  已适配  |  部分适配  |  未适配  |   已适配  |  未适配   |   已适配  |
-|   Android 11 新版存储权限   |  已适配  |  未适配  |  未适配  |   未适配  |  未适配   |   未适配  |
-|   Android 11 新版定位策略   |  已适配  |  未适配  |  未适配  |   未适配  |  未适配   |   未适配  |
 
 #### 框架亮点
 
