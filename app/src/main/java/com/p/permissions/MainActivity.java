@@ -1,4 +1,5 @@
-package com.ph.permissions;
+package com.p.permissions;
+
 
 import android.content.Intent;
 import android.os.Build;
@@ -8,6 +9,10 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.ph.permissions.HPermissions;
+import com.ph.permissions.OnPermission;
+import com.ph.permissions.Permission;
 
 import java.util.List;
 

@@ -4,11 +4,11 @@ android {
     compileSdkVersion 30
 
     defaultConfig {
-        applicationId "com.ph.permissions"
+        applicationId "com.p.permissions"
         minSdkVersion 14
         targetSdkVersion 30
-        versionCode 92
-        versionName "1.0"
+        versionCode 11
+        versionName "1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
