@@ -20,7 +20,7 @@
 ```groovy
 dependencies {
     // 权限请求框架
-   implementation 'com.github.dahui888:HPermissions:v1.0'
+   implementation 'com.github.dahui888:HPermissions:v1.1'
 }
 ```
 
