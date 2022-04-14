@@ -165,7 +165,7 @@ HPermissions.with(MainActivity.this)
 
 #### 框架亮点
 
-* 第一款适配 Android 11 的权限请求框架，适配过程几乎零成本
+* 适配 Android 11 的权限请求框架，适配过程几乎零成本
 
 * 简洁易用，采用链式调用的方式，使用只需一句代码
 
