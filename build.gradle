@@ -1,39 +1,36 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
     repositories {
-        maven { url 'http://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
+        // 阿里云云效仓库：https://maven.aliyun.com/mvn/guide
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        // 华为开源镜像：https://mirrors.huaweicloud.com/
+        maven { url 'https://repo.huaweicloud.com/repository/maven/' }
+        // JitPack 远程仓库：https://jitpack.io
         maven { url 'https://jitpack.io' }
-        jcenter()
+        mavenCentral()
         google()
+        // noinspection JcenterRepositoryObsolete
+        jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.6.4'
+        classpath 'com.android.tools.build:gradle:4.1.2'
     }
 }
 
 allprojects {
     repositories {
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
-        maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
-        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
-        maven { url 'https://maven.aliyun.com/nexus/content/repositories/central/' }
-        maven { url 'https://dl.bintray.com/getactivity/maven/' }
-        maven { url 'https://dl.bintray.com/umsdk/release' }
-        maven { url 'https://maven.google.com' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://repo.huaweicloud.com/repository/maven/' }
         maven { url 'https://jitpack.io' }
-        jcenter()
+        mavenCentral()
         google()
+        // noinspection JcenterRepositoryObsolete
+        jcenter()
     }
 
-    //解决app:mockableAndroidJar错误的问题
-    gradle.taskGraph.whenReady {
-        tasks.each { task ->
-            if (task.name.equals('mockableAndroidJar')) {
-                task.enabled = false
-            }
-        }
-    }
+    // 将构建文件统一输出到项目根目录下的 build 文件夹
+    setBuildDir(new File(rootDir, "build/${path.replaceAll(':', '/')}"))
 }
 
 task clean(type: Delete) {
