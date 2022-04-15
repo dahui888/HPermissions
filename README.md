@@ -53,7 +53,7 @@ android {
 
 dependencies {
     // 权限请求框架：https://github.com/dahui888/HPermissions
-	   implementation 'com.github.dahui888:HPermissions:1.2'
+       implementation 'com.github.dahui888:HPermissions:1.2'
 }
 ```
 
